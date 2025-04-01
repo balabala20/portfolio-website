@@ -3,12 +3,17 @@
   "version": 2,
   "builds": [
     {
+<<<<<<< HEAD
       "src": "server.js",
       "use": "@vercel/node"
     },
     {
       "src":"src/**/*",
       "use": "@vercel/node"
+=======
+      "src": "package.json",
+      "use": "@vercel/static-build"
+>>>>>>> b987c403f32c17a3059be02d87c9ebbd441f77ef
     }
   ],
   "routes": [
@@ -18,4 +23,3 @@
     }
   ]
 }
-
