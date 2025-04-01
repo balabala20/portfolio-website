@@ -1,5 +1,6 @@
 {
-    "buils":[
+    "version" : 2,
+    "builds":[
         {
             "src": "./backend/*.js",
             "use": "@vercel/node"
