@@ -1,0 +1,523 @@
+@media (max-width: 1000px) {
+  *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  /* Header section */
+  #header_part {
+    min-height: 50px;
+    display: flex;
+    align-items: center;
+    background-color: whitesmoke;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.177);
+  }
+  #header_part > #portfolio_name {
+    font-size: 30px;
+    font-weight: 800;
+    font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+    margin: 0 0 0 20px;
+    text-shadow: 0px 0px 10px rgba(27, 61, 183, 0.522);
+    width: 30px;
+    height: 30px;
+    margin-right: 30px;
+  }
+  /* menu slidebar */
+  #menu input{
+    display: none;
+    visibility: hidden;
+  }
+  #slidebar{
+    width: 250px;
+    height: 100dvh;
+    background: white;
+    position: fixed;
+    top: 0px;
+    right: -260px;
+    transition: 0.3s ease-in-out;
+    text-align: center;
+    padding-top: 20px;
+  }
+  #menu_text{
+    margin-top: 50px;
+  }
+  #slidebar>#menu_text>.menu_text{
+    width: 100%;
+    height: 50px;
+    margin: 20px 0 0 0;
+  
+  }
+  #menu_icon{
+    width: 30px;
+    height: 30px;
+    box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.464);
+    border-radius: 5px;
+    position: absolute;
+    top: 0px;
+    bottom: 0;
+    margin: auto;
+    right: 20px;
+    display: flex;
+    z-index: 1;
+  }
+  .menu_lines{
+    width: 25px;
+    height: 2px;
+    background-color: blue;
+    position: inherit;
+    top: 20px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    transition: 0.3s ease-in-out;
+  }
+  #menu_icon #top_line{
+    top: 7px;
+  }
+  #menu_icon #middle_line{
+    top: 15px;
+  }
+  #menu_icon #bottom_line{
+    top: 23px;
+  }
+  input:checked ~ #slidebar {
+    right: 0;
+  }
+  input:checked ~ #menu_icon #top_line{
+    top: 14px;
+    left: 0px;
+    transform: rotate(45deg);
+  }
+  input:checked ~ #menu_icon #bottom_line{
+    top: 14px;
+    right: 0px;
+    transform: rotate(-45deg);
+  }
+  input:checked ~ #menu_icon #middle_line{
+    left: 30px;
+    visibility: hidden;
+  }
+  /*Main section*/
+  #mobileMain {
+    width: 100%;
+    min-height: calc(100dvh - 60px);
+    position: relative;
+    background: white;
+    background-size: cover;
+    backdrop-filter: blur(3px);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+  /* menu section */
+  #menu_section {
+    min-width: 150px;
+    height: max-content;
+    background: rgb(130, 186, 205);
+    position: absolute;
+    right: 10px;
+    top: 50px;
+    display: flex;
+    flex-direction: column;
+    z-index: 1;
+    padding-top: 40px;
+    border-radius: 10px;
+  }
+  .menu_text {
+    width: 100%;
+    height: 40px;
+    text-align: center;
+  }
+  #menu_close {
+    width: 30px;
+    height: 30px;
+    font-size: 38px;
+    position: absolute;
+    right: 20px;
+    top: 0;
+    z-index: 1;
+  }
+  /* profile section */
+  #profile_section {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    backdrop-filter: blur(20px);
+  }
+#mobile_name {
+  font-size: 5em;
+  letter-spacing: 1px;
+  border-right: 3px solid;
+  color: rgb(0, 0, 0);
+  white-space: nowrap;
+  overflow: hidden;
+  animation: typing 5s steps(30) infinite, cursor .5s step-end infinite alternate;
+  font-weight: bolder;
+  text-align: center;
+  margin: auto;
+  margin-top: 15px;
+  max-width: fit-content;
+}
+
+/* cursor blinking */
+@keyframes cursor {
+  50% {
+    border-color: transparent;
+  }
+}
+
+/* typing effect */
+@keyframes typing {
+  from {
+    max-width: 0; /* change this */
+  }
+  to {
+    max-width: 100%; /* change this */
+  }
+}
+
+  #social_icons {
+    margin-top: 75px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+  .contact_icons {
+    width: 50px;
+    height: 50px;
+    font-size: 30px;
+    margin-left: 3%;
+    border-radius: 15px;
+    box-shadow: 0px 0px 10px rgb(0, 0, 0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.1s ease-in-out;
+    cursor: pointer;
+  }
+  .social_icons {
+    font-size: 40px;
+    transition: 0.1s ease-in-out;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+  }
+
+  /* about section */
+  #about_section::before {
+    content: "";
+    width: 85%;
+    height: 1px;
+    background: rgb(0, 0, 0);
+    position: absolute;
+    top: 15px;
+    left: 0;
+    right: 0;
+    margin: auto;
+  }
+  #about_section {
+    width: 100%;
+    min-height: max-content;
+    backdrop-filter: blur(20px);
+    position: relative;
+    top: 10px;
+  }
+  #about_section h2 {
+    margin: 20px 0 0 20px;
+  }
+  #about_section h2::after {
+    content: "";
+    width: 50px;
+    height: 2px;
+    background-color: rgb(90, 56, 169);
+    position: absolute;
+    top: 50px;
+    left: 20px;
+  }
+  #mobile_about_text {
+    width: 90%;
+    background-color: #f4f4f4;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    position: relative;
+    top: 10px;
+    left: 0;
+    right: 0;
+    margin: auto;
+  }
+  /* skills section */
+  #skills_section::before {
+    content: "";
+    width: 85%;
+    height: 1px;
+    background: rgb(0, 0, 0);
+    position: absolute;
+    top: 15px;
+    left: 0;
+    right: 0;
+    margin: auto;
+  }
+  #skills_section {
+    width: 100%;
+    min-height: max-content;
+    backdrop-filter: blur(20px);
+    position: relative;
+    top: 5px;
+  }
+  #mobile_skills_heading {
+    margin: 20px 0 0 20px;
+  }
+  #mobile_skills_heading::after {
+    content: "";
+    width: 50px;
+    height: 2px;
+    background-color: rgb(90, 56, 169);
+    position: absolute;
+    top: 50px;
+    left: 20px;
+  }
+  #mobile_skills_set {
+    width: 90%;
+    position: inherit;
+    left: 0;
+    right: 0;
+    margin: auto;
+  }
+  .mobile_skills {
+    background-color: #f4f4f4;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    font-size: 14px;
+    margin-top: 15px;
+  }
+  .mobile_skills h3 {
+    font-size: 15px;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  /* resume section */
+  #mobile_resume_section::before {
+    content: "";
+    width: 85%;
+    height: 1px;
+    background: rgb(0, 0, 0);
+    position: absolute;
+    top: 15px;
+    left: 0;
+    right: 0;
+    margin: auto;
+  }
+  #mobile_resume_section {
+    width: 100%;
+    min-height: max-content;
+    backdrop-filter: blur(20px);
+    position: relative;
+    top: 10px;
+  }
+  #mobile_resume_heading {
+    margin: 20px 0 0 20px;
+    position: relative;
+    display: inline-block;
+  }
+  #mobile_resume_heading::after {
+    content: "";
+    width: 50px;
+    height: 2px;
+    background-color: rgb(90, 56, 169);
+    position: absolute;
+    top: 30px;
+    left: 0px;
+  }
+  #mobile_resume_set {
+    width: 90%;
+    position: inherit;
+    left: 0;
+    right: 0;
+    margin: auto;
+  }
+  #mobile_education_decoration {
+    content: "";
+    width: 8px;
+    height: 328px;
+    display: flex;
+    background: linear-gradient(
+      to bottom,
+      rgba(25, 117, 151, 0.166),
+      rgba(48, 146, 176, 0.232)
+    );
+    position: relative;
+    border-radius: 10px;
+    top: 25px;
+    left: 25px;
+    display: flex;
+    flex-direction: column;
+  }
+  #mobile_education_decoration #dot2{
+    margin-top: 165px;
+  }
+  #mobile_education_decoration #dot3{
+    margin-top: 140px;
+  }
+  .mobile_certifications{
+    background-color: #f4f4f4;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    font-size: 14px;
+  }
+  .mobile_certifications>img{
+    width: 300px;
+    height: 250px;
+  }
+  /* projects section */
+  #mobile_project_section::before {
+    content: "";
+    width: 85%;
+    height: 1px;
+    background: rgb(0, 0, 0);
+    position: absolute;
+    top: 15px;
+    left: 0;
+    right: 0;
+    margin: auto;
+  }
+  #mobile_project_section {
+    width: 100%;
+    min-height: max-content;
+    backdrop-filter: blur(20px);
+    position: relative;
+    top: 15px;
+  }
+  #project_set {
+    width: 90%;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 15px;
+    position: relative;
+    top: 10px;
+    left: 0;
+    right: 0;
+    margin: auto;
+  }
+  .project {
+    background-color: #f4f4f4;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    font-size: 14px;
+  }
+  .project>a>img{
+    width: 100%;
+    height: 200px;
+}
+  #mobile_project_heading {
+    margin: 20px 0 0 20px;
+    position: relative;
+    display: inline-block;
+  }
+  #mobile_project_heading::after {
+    content: "";
+    width: 60px;
+    height: 2px;
+    background-color: rgb(90, 56, 169);
+    position: absolute;
+    top: 30px;
+  }
+
+  .project h3 {
+    font-size: 15px;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  .project h4 {
+    font-size: 15px;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  .project p {
+    font-size: 14px;
+  }
+
+  /*contact section */
+  #contact_section::before {
+    content: "";
+    width: 75%;
+    height: 1px;
+    background: rgb(0, 0, 0);
+    position: absolute;
+    top: 15px;
+    left: 0;
+    right: 0;
+    margin: auto;
+  }
+  #contact_section {
+    width: 100%;
+    min-height: max-content;
+    backdrop-filter: blur(20px);
+    position: relative;
+    top: 10px;
+    padding-bottom: 100px;
+  }
+  #mobile_form {
+    width: 85%;
+    border: 2px solid rgb(0, 0, 0);
+    border-radius: 10px;
+    padding: 30px 20px;
+    position: relative;
+    top: 40px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  #textmail {
+    width: 85%;
+  }
+  #textmail>p{
+    width: fit-content;
+  }
+  .formText{
+    width: 100%;
+    padding: 12px 0px;
+    border: 1px solid #000000;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  #mobile_submit {
+    margin-top: 20px;
+    background-color: #4caf50;
+    width: 150px;
+    height: fit-content;
+    color: white;
+    padding: 14px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+  #Msg {
+    height: 100px;
+    padding: 12px 0px;
+    border: 1px solid #000000;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+
+  /* mobile about section */
+  #mobileUserData{
+    
+  }
+}
