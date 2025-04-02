@@ -21,7 +21,7 @@ function App() {
         />
       </Routes>
       <Routes>
-        <Route path="adminPage" element={<AdminPage />} />
+        <Route path="/adminPage" element={<AdminPage />} />
       </Routes>
     </div>
   );
