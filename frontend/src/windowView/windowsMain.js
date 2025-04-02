@@ -29,7 +29,6 @@ import plcScadaCertificate from "../img/plc-scada-certificate.jpg";
 import project1 from "../img/project1.png";
 import { Link } from "react-router-dom";
 
-
 function Profile() {
   return (
     <div id="profile">
@@ -387,6 +386,8 @@ function Projects() {
   );
 }
 
+const base_url =`http://localhost:5000`;
+
 function Contact() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -406,7 +407,7 @@ function Contact() {
 
     try {
       const user = { name, email, message }; // Define user object here
-      const response = await fetch(`http://localhost:5000/users/adduser`, {
+      const response = await fetch(`${base_url}/users/adduser`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json", // Fixed typo

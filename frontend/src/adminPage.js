@@ -2,18 +2,20 @@ import React, { useState, useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTrash } from "@fortawesome/free-solid-svg-icons";
 
+const base_url = `http://localhost:5000`;
+
 const AdminPage = () => {
   const [data, setData] = useState([]);
   const [feedback, setFeedback] = useState("");
   useEffect(() => {
-    fetch(`http://localhost:5000/users/getusers`)
+    fetch(`${base_url}/users/getusers`)
       .then((response) => response.json())
       .then((data) => setData(data))
       .catch((err) => console.log("there is an error:", err));
   }, []);
   const handleDelete = async (id) => {
     const response = await fetch(
-      `http://localhost:5000/users/deleteuser/${id}`,
+      `${base_url}/users/deleteuser/${id}`,
       {
         method: "DELETE",
         headers: {

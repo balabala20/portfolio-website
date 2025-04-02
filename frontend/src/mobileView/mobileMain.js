@@ -270,7 +270,10 @@ function Projects() {
     </div>
   );
   return projects;
+
 }
+const base_url = `http://localhost:5000`;
+
 function Contact() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -288,7 +291,7 @@ function Contact() {
 
     try {
       const user = { name, email, message }; // Define user object here
-      const response = await fetch(`http://localhost:5000/api/users/add-user`, {
+      const response = await fetch(`${base_url}/api/users/add-user`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json", // Fixed typo
