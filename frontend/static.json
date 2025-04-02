@@ -1,5 +1,0 @@
-{
-    "rewrites":[
-        {"source":"/adminPage","destination":"/index.html"}
-    ]
-}
