@@ -386,7 +386,7 @@ function Projects() {
   );
 }
 
-const base_url =`http://localhost:5000`;
+const base_url =`https://portfoliowebsite-kkap.onrender.com`;
 
 function Contact() {
   const [name, setName] = useState("");
